@@ -1,0 +1,10 @@
+windows API
+窗口管理函数：窗口创建、移动、修改
+图形设备函数：图形绘制等
+系统服务函数：实现与操作系统有关的一些功能
+
+API(Application Programming Interface,应用程序接口)
+SDK(Software Development Kit,软件开发工具包)
+MFC(Microsoft Foundation Classes,微软基础类库),以c++封装API
+
+
