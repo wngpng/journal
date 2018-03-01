@@ -110,6 +110,7 @@ CObject
 			|-应用程序对象
 				|-::DefWindowProc()
 
+
 设计原则
 	数据和函数属于哪个类的，就由哪个类来管理
 
@@ -134,3 +135,6 @@ UpdateAllViews
 鼠标消息响应
 视图类添加消息映射、响应函数实现
 框架响应，主框架类添加消息映射、响应函数实现
+
+窗口初始化
+https://msdn.microsoft.com/en-us/library/x07xt611.aspx
