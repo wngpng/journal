@@ -1,0 +1,115 @@
+git config --global user.name "wngpng"
+git config --global user.email wp-lx@163.com
+
+git config --list
+git config user.name
+
+git help <verb>
+git <verb> --help
+man git-<verb>
+
+git help config
+
+git init //.git
+git add *.c
+git commit -m 'initial project version'
+
+git clone [url]
+git clone [url] repoFileName
+
+git status
+git add *.c//track
+git status
+git status -s
+
+.gitignore
+#no .a files
+*.a
+#but do track lib.a,even though you're ignoring .a files above
+!lib.a
+#only ignore the file in the current directory,not subdir/TODO
+/TODO
+#ignore all files in the build/directory
+build/
+#ignore doc/notes.txt,but not doc/server/arch.txt
+doc/*.txt
+#ignore all .pdf files in the doc/ ditectory
+doc/**/*.pdf
+//http://github.com/github/gitignore
+
+git diff
+git diff --staged
+git difftool
+git difftool --tool-help
+
+git commit -m "Story 182: Fix benchmarks fot speed"
+
+git commit -a -m "add all tracked files"
+
+git add/rm <file>
+
+git rm --cached README
+git rm log/\*.log//.log in log/
+git rm \*~
+
+git mv README.md README
+
+git log 
+git log -p -2
+git log --stat
+git log --pretty=oneline //=short,full,fuller,format:"%h - %an, %ar : %s"
+git log --pretty=format:"%h %s" --graph
+git log --since=2.weeks
+git log -Sfunction_name
+git log --pretty="%h - %s" --author=gitster --since="2008-10-01" \
+--before="2008-11-01" ==no-merges --t/
+
+git remote 
+git remote -v
+git fetch origin
+git fetch [remote-name]
+git pull
+
+git clone
+
+git push origin master
+git remote show origin
+
+git tag
+
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+
+
+git branch testing
+git checkout testing//change to testing working
+git checkout master
+
+git log --oneline --decorate --graph --all
+
+git checkout -b iss53
+
+git checkout master
+
+git checkout -b hotfix
+
+git checkout master
+git merge hotfix
+git branch -d hotfix
+
+git checkout iss53
+
+git checkout master
+git merge iss53
+git branch -d iss53
+
+git branch
+git branch -v
+git branch --merged
+git branch --no-merged
+
+git branch -d testing
+
+git fetch origin //origin/master
