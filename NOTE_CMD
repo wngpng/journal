@@ -1,5 +1,0 @@
-for /r  ./ %i in (*note*) do @echo %i
-del
-dir
-move
-cd
