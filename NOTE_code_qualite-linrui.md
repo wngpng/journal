@@ -101,4 +101,73 @@
 2. 函数接口说明
 3. 重要代码行或段落提示
 
-page20
+# 类的版本
++ “以行为为中心”的书写方式，即，将public类型的函数卸载前面，将private类型的数据写在后面。
+   关注类应该提供什么样的接口或服务。
+   这样做不仅让自己在设计类时思路清晰，而且方便别人阅读。
+   因为用户最关心的是接口，谁愿意看到一堆私有数据成员！
+
+# 命名规则
+* 标识符应当直观且可以拼读，可望文知意，不必进行“解码”。
+	切记使用汉语拼音，英语单词用词需准确。例如不要把CurrentValue写成NowValue.
+* 标识符的长度应当符合“min-length && max-information”原则。
+* 命名规则尽量与所采用的操作系统或者开发工具的风格保持一致。
+	Windows 驼峰式 		AddChild
+	Unix	小写加下划线	add_child
+* 程序中不要出现仅靠大小写区分的相似的标识符。
+	int x, X;
+	void foo(int x);
+	void FOO(float x);
+	容易混淆
+* 程序中不要出现标识符完全相同的局部变量和全局变量，尽管两者的作用域不同而不会发生语法错误，但会使人误解。
+* 变量的名字应当使用“名词”或者“形容词+名词”
+	例如：float value;
+		float oldValue;
+		float newValue;
+* 全局函数的名字应当使用“动词”或者“动词+名词”（动宾词组）
+  类的成员函数应当只使用“动词”，被省略掉的名词就是对象本身。
+	例如:
+		DrawBox();	//全局函数
+		box->Draw();	//类的成员函数
+* 用正确的反义词组命名具有互斥意义的变量或相反动作的函数等。
+	例如：
+		int minValue;
+		int maxValue;
+
+		int SetValue(...);
+		int GetValue(...);
+* 尽量避免名字中出现数字编号，如Value1，Value2等，除非逻辑上的确需要编号。
+  这是为了防止程序员偷懒，不肯为命名动脑筋而导致产生无意义的名字。
+
+##Windows命名风格
+* 类名和函数名用大写字母开头的单词组合而成。
+	例如：
+		class Node;	//类名
+		class LeafNode;
+
+		void Draw(void);//函数名
+		void SetValue(int value);
+
+* 变量和参数用小写字母开头的单词组合而成。
+	例如：
+		BOOL	flag;
+		int 	drawMode;
+
+* 常量全用大写的字母，用下划线分割单词。
+	例如：
+		const int MAX = 100;
+		const int MAX_LENGTH = 100;
+* 静态变量加前缀s\_(表示static)
+	例如：
+		static int s_initValue;	//静态变量。考虑s开头
+* 如果不得已需要全局变量，则使全局变量加前缀 g\_(表示global)
+	例如：
+		int g_howManyPeople;	//全局变量
+* 类的成员函数加前缀 m\_(表示member)
+	例如：
+		void Object::SetValue(int width, int height)
+		{
+			m_width = width;
+			m_height = height;
+		}
+* 为了防止某一软件库中的一些标识符和其他软件库中的冲突，各种标识符加上能反映软件性质的前缀。例如三位图形标准OpenGL的所有均以gl开头，所有常量（或宏定义）均以GL开头。
