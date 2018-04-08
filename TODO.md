@@ -22,3 +22,8 @@
 - 试卷对照考纲为主线。补充考纲中未涉及的题目。题目书本中找例题。
 - 自动控制原理
 - 现代控制原理
+
+
+recite words every morning.
+read New Concept English every morning.
+living study working.

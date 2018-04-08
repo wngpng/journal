@@ -27,7 +27,9 @@
 - devmgmt.msc	设备管理器
 - diskmgmt.msc	磁盘管理实用工具
 - netstat -an	TC命令检查接口
-= CMD
+
+* CMD
+- _type_	显示文本内容
 - help		cmd中
 - shutdown /s	关机
 - shutdown /s	/t xxx	xxx秒后关机，默认30秒
