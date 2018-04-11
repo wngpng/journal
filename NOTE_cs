@@ -1,3 +1,20 @@
-understand design from code with visual studio 2015 code maps
+委托、泛型、匿名类型、数据绑定、web API、命名空间
+1.名称空间
+.NET中提供应用程序程序代码容器的方法，唯一地标识代码及其内容。
+也用作.NET Framework 中给项分类的一种方式。大多数项都是类型定义。
 
+全局名称空间中通过限定名称引用具体名称
+使用using前，名称空间中的代码需以某种方式链接到项目上，或者代码是在该项目的源文件中定义，或者在链接到该项目的其他代码中定义。
+也就是说，能否访问某名称，不由using决定，using语句只是便于我们访问这些名称，减少代码量，以及提高可读性。
+
+变量的命名
+-变量的第一个字符必须是字母、下划线或@
+-其后的字符可以是字母、下划线或数字
+
+2.函数
+仔细阅读C#规范会发现形参和实参之间存在一些细微的区别：形参是函数定义的一部分，而实参则是由调用代码传递给函数。但是，这两个术语通常被简单地成为参数，似乎没有人对此感到十分不满。
+参数数组 params关键字
+
+
+understand design from code with visual studio 2015 code maps
 https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502
